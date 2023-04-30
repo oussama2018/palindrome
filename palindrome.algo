@@ -1,0 +1,25 @@
+PROCEDURE saisie(VAR ch:ARRAY_OF STRING  )
+VAR
+    i:INTEGER:=0
+
+
+BEGIN
+  
+        read(ch)
+  
+END
+
+ALGORITHM palindrome
+VAR
+    i:INTEGER:=0;
+    word:STRING;
+    Palind:BOOLEAN:=true;
+BEGIN
+    saisie(word);
+    REPEAT
+        i:=i+1;
+        IF (word[i] <> length.word-i+1) THEN
+            Palind:=false;
+        END_IF
+    UNTIL ((i >= length.word /2) or Palind==false)
+END
